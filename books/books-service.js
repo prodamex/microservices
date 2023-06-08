@@ -7,9 +7,9 @@ const app = express();
 app.use(bodyParser.json());
 
 let books = [
-  { id: 1, title: "Livre 1", authorId: 1, categoryId: 1 },
-  { id: 2, title: "Livre 2", authorId: 2, categoryId: 2 },
-  { id: 3, title: "Livre 3", authorId: 2, categoryId: 1 },
+  { id: 1, title: "Book one", authorId: 1, categoryId: 1 },
+  { id: 2, title: "Book two", authorId: 2, categoryId: 2 },
+  { id: 3, title: "Book three 3", authorId: 2, categoryId: 1 },
 ];
 
 app.get("/books", async (req, res) => {
@@ -41,14 +41,14 @@ app.get("/books/:id", async (req, res) => {
       res.json(bookDetails);
     } catch (error) {
       res.status(500).json({
-        error: "Erreur lors de la récupération des détails du livre",
+        error: "Error",
       });
     }
   } else {
-    res.status(404).json({ error: "Livre non trouvé" });
+    res.status(404).json({ error: "None Found" });
   }
 });
 
 app.listen(3000, () => {
-  console.log("App books démarré sur le port 3000");
+  console.log("Started in 3000");
 });

@@ -2,14 +2,15 @@ const express = require("express");
 const axios = require("axios");
 const bodyParser = require("body-parser");
 
+
 const app = express();
 
 app.use(bodyParser.json());
 
 let authors = [
-  { id: 1, name: "Author 1" },
-  { id: 2, name: "Author 2" },
-  { id: 3, name: "Author 3" },
+  { id: 1, name: "Author one" },
+  { id: 2, name: "Author two" },
+  { id: 3, name: "Author three" },
 ];
 
 app.get("/authors", async (req, res) => {
@@ -22,11 +23,13 @@ app.get("/authors/:id", async (req, res) => {
 
   if (author) {
     res.json(author);
-  } else {
-    res.status(404).json({ error: "Author non trouvé" });
+  } 
+  else {
+
+  res.status(404).json({ error: "Author non found" });
   }
 });
 
 app.listen(4000, () => {
-  console.log("App authors démarré sur le port 4000");
+  console.log("Started in 4000");
 });

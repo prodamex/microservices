@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-books": "node books-service.js"
+    "start-books": "node books-service.js",
+    "start": "node books-service.js"
   },
   "author": "",
   "license": "ISC",

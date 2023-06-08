@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-categories": "node categories-service.js"
+    "start-categories": "node categories-service.js",
+    "start": "node categories-service.js"
   },
   "author": "",
   "license": "ISC",

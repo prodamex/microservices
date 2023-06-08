@@ -4,7 +4,8 @@
   "description": "",
   "main": "authors-service.js",
   "scripts": {
-    "start-authors": "node authors-service.js"
+    "start-authors": "node authors-service.js",
+    "start": "node authors-service.js"
   },
   "author": "",
   "license": "ISC",
