@@ -7,9 +7,9 @@ const app = express();
 app.use(bodyParser.json());
 
 let categories = [
-  { id: 1, name: "Categorie 1" },
-  { id: 2, name: "Categorie 2" },
-  { id: 3, name: "Categorie 3" },
+  { id: 1, name: "Categorie one" },
+  { id: 2, name: "Categorie two" },
+  { id: 3, name: "Categorie three" },
 ];
 
 app.get("/categories", async (req, res) => {
@@ -23,10 +23,10 @@ app.get("/categories/:id", async (req, res) => {
   if (category) {
     res.json(category);
   } else {
-    res.status(404).json({ error: "Categorie non trouvé" });
+    res.status(404).json({ error: "Categorie none found" });
   }
 });
 
 app.listen(5000, () => {
-  console.log("App categories démarré sur le port 5000");
+  console.log("Started in 5000");
 });
